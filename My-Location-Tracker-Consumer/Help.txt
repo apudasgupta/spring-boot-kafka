@@ -1,0 +1,59 @@
+
+MetroNet Server: 103.36.103.78
+------------------------INSERT LOCATION----------------------------------
+Request Method: POST
+http://lt1.iatlbd.com:7000/lt/locationTracker/insertLocation
+[
+    {
+        "companyId":1,
+        "username":"tl001",        
+        "latitude":"23.276382",
+        "longitude":"91.1999679",
+        "time":"159550495051",
+        "token":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUTTAwMSIsImV4cCI6MTU5NjQzOTE1NiwiaWF0IjoxNTk0NjI0NzU2fQ.M4XzlE_ER0af16WShlUMFr1fBqKHNz5vpi4snQCqdpldF5eg2naskGepcKFf6JYAX1Eeay8QqnL0W9QeO7hk3w"
+
+    },
+    {
+        "companyId":1,
+        "username":"tl001",        
+        "latitude":"24.276382",
+        "longitude":"92.1999679",
+        "time":"159550495051",
+        "token":"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUTTAwMSIsImV4cCI6MTU5NjQzOTE1NiwiaWF0IjoxNTk0NjI0NzU2fQ.M4XzlE_ER0af16WShlUMFr1fBqKHNz5vpi4snQCqdpldF5eg2naskGepcKFf6JYAX1Eeay8QqnL0W9QeO7hk3w"
+
+    }    
+]
+
+------------------------GET CURRENT LOCATION OF A USER----------------------------------
+Request Method: GET
+http://lt1.iatlbd.com:7000/lt/locationTracker/getLastLocationOfUser?companyId=1&username=tl001
+------------------------SAVE FCM TOKEN----------------------------------
+Request Method: POST
+
+http://lt1.iatlbd.com:7000/lt/fcmToken/saveToken
+
+{
+	"fcmToken": "sncjdhsbchdvbchjdbch7r7rtbdjhbvfhbvhdf", 
+    "username": "TM001", 
+    "deviceUniqueId": "bdhcdh73645cvdvfdf", 
+    "deviceModel": "Redmi note 5 pro"
+}
+
+-----------------------REMOVE TOKEN FROM USER ASSOCIATION-----------------
+Request Method: POST
+
+http://lt1.iatlbd.com:7000/lt/fcmToken/removeTokenFromUserAssociation
+{
+	"fcmToken": "sncjdhsbchdvbchjdbch7r7rtbdjhbvfhbvhdf"
+}
+
+-----------------------OTHERS LINK : GET ALL fcm_tokens -----------------
+
+http://lt1.iatlbd.com:7000/lt/locationTracker/getLastLocationOfUser?companyId=1&username=tl001
+
+
+http://lt1.iatlbd.com:7000/lt/fcmToken/getAll
+
+
+
+
